@@ -7,9 +7,7 @@
 //
 
 #import "RHToastView.h"
-#import "UIFont+App.h"
 #import "Masonry.h"
-#import "NSObject+Log.h"
 
 @implementation RHToastView
 
@@ -24,7 +22,7 @@
         _textLabel.backgroundColor = [UIColor clearColor];
         _textLabel.textAlignment = NSTextAlignmentCenter;
         _textLabel.textColor = [UIColor whiteColor];
-        _textLabel.font = [UIFont fontForAppWithSize:14.0f];
+        _textLabel.font = [UIFont systemFontOfSize:14.0f];
         _textLabel.numberOfLines = 0;
         [self addSubview:_textLabel];
         [_textLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -40,7 +38,9 @@
 
 - (void)dealloc
 {
-    RHLogLog(@"[dealloc] RHToastView...");
+#ifdef DEBUG
+    NSLog(@"[dealloc] RHToastView...");
+#endif
 }
 
 - (void)showWithMessage:(NSString *)message
