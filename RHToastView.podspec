@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RHToastView"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "RHToastView: The view like android toast."
   s.homepage     = "https://github.com/zhu410289616/RHToastView"
   s.license      = { :type => "Apache", :file => "LICENSE" }
@@ -14,6 +14,5 @@ Pod::Spec.new do |s|
   s.source_files  = "RHToastView/*.{h,m}" 
   s.requires_arc = true
   s.dependency 'Masonry', '~> 0.6.1'
-  s.dependency 'RHCategoryKit', '~> 1.0.3'
 
 end
